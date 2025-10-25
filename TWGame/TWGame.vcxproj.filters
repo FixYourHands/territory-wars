@@ -12,20 +12,44 @@
     <Filter Include="Images">
       <UniqueIdentifier>{1ca09b02-b55c-4b1a-85f3-fd13f7305fdc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{13397ecc-da3b-4719-9561-8df7b4af80b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{4c5cb983-a073-4081-a01d-e97915374ed1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mouseEventProcessor.cpp">
+    <ClCompile Include="src\TWSprite.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MouseEventProcessor.cpp">
+      <Filter>Source Files\Input</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h">
+    <ClInclude Include="include\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mouseEventProcessor.h">
+    <ClInclude Include="include\MouseEventProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PlayerFrameData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PlayerSprite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TWSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

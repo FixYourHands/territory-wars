@@ -1,2 +1,9 @@
 ﻿  main.cpp
-  TWGame.vcxproj -> F:\Programming\C++\Territory Wars\territory-wars\TWGame\x64\Debug\TWGame.exe
+F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(35,24): error C2065: 'IDLE_FRAMES': undeclared identifier
+F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(75,30): error C2065: 'IDLE_FRAMES': undeclared identifier
+F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(79,25): error C2065: 'IDLE_FRAMES': undeclared identifier
+F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(59,46): warning C4390: ';': empty controlled statement found; is this the intent?
+  MouseEventProcessor.cpp
+  PlayerSprite.cpp
+  TWSprite.cpp
+  Generating Code...

@@ -1,4 +1,4 @@
-#include "mouseEventProcessor.h"
+#include "MouseEventProcessor.h"
 #include <iostream>
 
 using Event = sf::Event;

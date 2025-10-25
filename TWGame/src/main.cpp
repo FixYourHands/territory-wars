@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <array>
-#include "mouseEventProcessor.h"
+
+#include "MouseEventProcessor.h"
 
 
 using Circle = sf::CircleShape;
@@ -12,15 +12,6 @@ using Event = sf::Event;
 enum class ShapeType
 {
 	Circle, Rectangle
-};
-
-static constexpr std::array<sf::IntRect, 5> IDLE_FRAMES =
-{
-	sf::IntRect{ {9, 4},   {27, 41} },
-	sf::IntRect{ {58, 4},  {27, 41} },
-	sf::IntRect{ {106, 4}, {27, 41} },
-	sf::IntRect{ {155, 4}, {27, 41} },
-	sf::IntRect{ {202, 4}, {27, 41} }
 };
 
 
@@ -78,10 +69,14 @@ int main()
 			}
 			
 		}
-		if (counter > 10'000)
-			counter = 0;
+		
+		if (clock.getElapsedTime().asMilliseconds() >= 250)
+		{
+			counter = (counter + 1) % IDLE_FRAMES.size();
+			clock.restart();
+		}
 
-		sprite.setTextureRect(IDLE_FRAMES[++counter % 2]);
+		sprite.setTextureRect(IDLE_FRAMES[counter]);
 
 		window.clear(sf::Color::Magenta);
 		window.draw(sprite);
