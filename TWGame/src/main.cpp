@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
-
 #include "MouseEventProcessor.h"
+#include "Animation.h"
 
 
 using Circle = sf::CircleShape;
@@ -32,16 +32,22 @@ int main()
 
 	sf::IntRect rect {sprite.getTextureRect()};
 	sf::IntRect irect{};
-	sprite.setTextureRect(IDLE_FRAMES[1]);
+	sprite.setTextureRect(IDLE_FRAMES[1].rect);
 	sprite.setScale(sf::Vector2{ 2.f,2.f });
 
 	sf::Clock clock;
-
+	float elapsedTime{ 0.f };
+	auto deltaTime{ 0.f };
 	
-	int counter = 0;
+	int counter{ 0 };
+
+	Animation<IDLE_FRAMES.size()> boyIdleAnimation(IDLE_FRAMES);
+	
+
 
 	while (window.isOpen())
 	{
+		deltaTime = clock.restart().asSeconds();
 		while (const std::optional event = window.pollEvent())
 		{
 			if (event->is<Event::Closed>())
@@ -52,36 +58,17 @@ int main()
 			MouseEventProcessor MEP{event};
 			MEP.executeEvent();
 
-			if (const auto* e = event->getIf<Event::KeyPressed>())
-			{
-				if (e->scancode == sf::Keyboard::Scan::X)
-					width++;
-				if (e->scancode == sf::Keyboard::Scan::Y);
-				height++;
-			}
-
-			if (const auto* e = event->getIf<Event::KeyPressed>())
-			{
-				if (e->scancode == sf::Keyboard::Scancode::B)
-				{
-					
-				}
-			}
 			
 		}
+		boyIdleAnimation.update(deltaTime);
+		sprite.setTextureRect(boyIdleAnimation.getRect());
 		
-		if (clock.getElapsedTime().asMilliseconds() >= 250)
-		{
-			counter = (counter + 1) % IDLE_FRAMES.size();
-			clock.restart();
-		}
-
-		sprite.setTextureRect(IDLE_FRAMES[counter]);
 
 		window.clear(sf::Color::Magenta);
 		window.draw(sprite);
 
 		window.display();
+		
 	}
 	
 

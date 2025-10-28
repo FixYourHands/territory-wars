@@ -1,9 +1,13 @@
 ﻿  main.cpp
-F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(35,24): error C2065: 'IDLE_FRAMES': undeclared identifier
-F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(75,30): error C2065: 'IDLE_FRAMES': undeclared identifier
-F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(79,25): error C2065: 'IDLE_FRAMES': undeclared identifier
-F:\Programming\C++\Territory Wars\territory-wars\TWGame\src\main.cpp(59,46): warning C4390: ';': empty controlled statement found; is this the intent?
-  MouseEventProcessor.cpp
-  PlayerSprite.cpp
-  TWSprite.cpp
-  Generating Code...
+  TWGame.vcxproj -> F:\Programming\C++\Territory Wars\territory-wars\TWGame\x64\Debug\TWGame.exe
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-audio-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-audio-d-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-graphics-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-graphics-d-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-network-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-network-d-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-system-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-system-d-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-window-3.dll
+  F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-window-d-3.dll
+  10 File(s) copied

@@ -37,9 +37,6 @@
     <ClInclude Include="include\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\MouseEventProcessor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\PlayerFrameData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -52,5 +49,13 @@
     <ClInclude Include="include\TWSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\MouseEventProcessor.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\Animation.tpp">
+      <Filter>Header Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
