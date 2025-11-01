@@ -18,6 +18,9 @@
     <Filter Include="Header Files\Input">
       <UniqueIdentifier>{4c5cb983-a073-4081-a01d-e97915374ed1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Animation">
+      <UniqueIdentifier>{a5c72e7f-c21b-4b99-9f39-118597bb5b33}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -34,12 +37,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Animation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\PlayerFrameData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\CharacterSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -52,16 +49,22 @@
     <ClInclude Include="include\MouseEventProcessor.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
+    <ClInclude Include="include\Animation.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AnimationFrameBuilder.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
     <ClInclude Include="include\CharacterFrameConstants.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animation</Filter>
     </ClInclude>
     <ClInclude Include="include\PurpleWalkingAnimation.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation.tpp">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animation</Filter>
     </None>
   </ItemGroup>
 </Project>

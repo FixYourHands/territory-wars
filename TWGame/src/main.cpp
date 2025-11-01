@@ -32,7 +32,6 @@ int main()
 
 	sf::IntRect rect {sprite.getTextureRect()};
 	sf::IntRect irect{};
-	//sprite.setTextureRect(_animation_PurpleWalkRightFront[0].getRect());
 	sprite.setScale(sf::Vector2{ 2.f,2.f });
 
 
@@ -42,7 +41,7 @@ int main()
 	
 	int counter{ 0 };
 
-	Animation<_animation_PurpleWalkRightFront.size()> boyIdleAnimation(_animation_PurpleWalkRightFront);
+	Animation<_animation_PurpleWalkRightFront.size()> boyIdleAnimation(_animation_PurpleWalkLeftRear);
 	
 
 

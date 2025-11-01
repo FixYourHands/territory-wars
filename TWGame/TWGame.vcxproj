@@ -26,9 +26,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Animation.h" />
+    <ClInclude Include="include\AnimationFrameBuilder.h" />
     <ClInclude Include="include\MouseEventProcessor.h" />
     <ClInclude Include="include\CharacterFrameConstants.h" />
-    <ClInclude Include="include\PlayerFrameData.h" />
     <ClInclude Include="include\CharacterSprite.h" />
     <ClInclude Include="include\PurpleWalkingAnimation.h" />
     <ClInclude Include="include\resource.h" />

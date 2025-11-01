@@ -1,5 +1,5 @@
 template <size_t N>
-Animation<N>::Animation(const std::array<FrameData, N>& frameArray) 
+Animation<N>::Animation(const std::array<DataStructures::FrameData, N>& frameArray)
 	: frames(&frameArray),elapsedTime(0.f),totalFrames(N),currentFrame(0){}
 
 template <size_t N>
