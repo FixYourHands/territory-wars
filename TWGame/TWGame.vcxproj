@@ -25,17 +25,17 @@
     <ClCompile Include="src\TWSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Animation.h" />
-    <ClInclude Include="include\AnimationFrameBuilder.h" />
+    <ClInclude Include="include\Animation\Animation.h" />
+    <ClInclude Include="include\Animation\AnimationFrameBuilder.h" />
+    <ClInclude Include="include\Animation\CharacterFrameConstants.h" />
+    <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h" />
     <ClInclude Include="include\MouseEventProcessor.h" />
-    <ClInclude Include="include\CharacterFrameConstants.h" />
     <ClInclude Include="include\CharacterSprite.h" />
-    <ClInclude Include="include\PurpleWalkingAnimation.h" />
     <ClInclude Include="include\resource.h" />
     <ClInclude Include="include\TWSprite.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\Animation.tpp" />
+    <None Include="include\Animation\Animation.tpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

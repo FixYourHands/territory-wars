@@ -21,6 +21,9 @@
     <Filter Include="Header Files\Animation">
       <UniqueIdentifier>{a5c72e7f-c21b-4b99-9f39-118597bb5b33}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Animation\SpriteSheet">
+      <UniqueIdentifier>{2d8adc9c-a496-44d6-b742-a671a0e9e2bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -49,21 +52,21 @@
     <ClInclude Include="include\MouseEventProcessor.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
-    <ClInclude Include="include\Animation.h">
+    <ClInclude Include="include\Animation\Animation.h">
       <Filter>Header Files\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="include\AnimationFrameBuilder.h">
+    <ClInclude Include="include\Animation\AnimationFrameBuilder.h">
       <Filter>Header Files\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="include\CharacterFrameConstants.h">
+    <ClInclude Include="include\Animation\CharacterFrameConstants.h">
       <Filter>Header Files\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="include\PurpleWalkingAnimation.h">
-      <Filter>Header Files\Animation</Filter>
+    <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h">
+      <Filter>Header Files\Animation\SpriteSheet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\Animation.tpp">
+    <None Include="include\Animation\Animation.tpp">
       <Filter>Header Files\Animation</Filter>
     </None>
   </ItemGroup>

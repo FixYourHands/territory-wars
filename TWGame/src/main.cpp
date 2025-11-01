@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "MouseEventProcessor.h"
-#include "Animation.h"
+#include "Animation/Animation.h"
 
 
 using Circle = sf::CircleShape;
@@ -40,8 +40,8 @@ int main()
 	auto deltaTime{ 0.f };
 	
 	int counter{ 0 };
-
-	Animation<_animation_PurpleWalkRightFront.size()> boyIdleAnimation(_animation_PurpleWalkLeftRear);
+	
+	Animation<ANIMATION_PurpleWalkRightFront.size()> boyIdleAnimation(ANIMATION_GreenWalkLeftRear);
 	
 
 
