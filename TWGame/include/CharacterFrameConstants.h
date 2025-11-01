@@ -31,7 +31,7 @@ struct FrameData
 	};
 };
 
-namespace PlayerFrameConstants
+namespace CharacterFrameConstants
 {
 	static constexpr float slowFrameSpeed{ .15f };
 	static constexpr float fastFrameSpeed{ .05f };
