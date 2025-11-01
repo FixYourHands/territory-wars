@@ -40,7 +40,7 @@
     <ClInclude Include="include\PlayerFrameData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\PlayerSprite.h">
+    <ClInclude Include="include\CharacterSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\resource.h">
@@ -51,6 +51,12 @@
     </ClInclude>
     <ClInclude Include="include\MouseEventProcessor.h">
       <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CharacterFrameConstants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PurpleWalkingAnimation.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -18,7 +18,7 @@ enum class ShapeType
 int main()
 {
 	sf::RenderWindow window{ sf::VideoMode({ 800,800 }), "My SFML Window" };
-	sf::Texture texture("images/boy_with_bag.png");
+	sf::Texture texture("images/round2.png");
 	sf::Sprite sprite(texture);
 	window.setKeyRepeatEnabled(false);
 
@@ -32,8 +32,9 @@ int main()
 
 	sf::IntRect rect {sprite.getTextureRect()};
 	sf::IntRect irect{};
-	sprite.setTextureRect(IDLE_FRAMES[1].rect);
+	sprite.setTextureRect(WALKING_RIGHT_FRAMES[0].getRect());
 	sprite.setScale(sf::Vector2{ 2.f,2.f });
+
 
 	sf::Clock clock;
 	float elapsedTime{ 0.f };
@@ -41,7 +42,7 @@ int main()
 	
 	int counter{ 0 };
 
-	Animation<IDLE_FRAMES.size()> boyIdleAnimation(IDLE_FRAMES);
+	Animation<WALKING_RIGHT_FRAMES.size()> boyIdleAnimation(WALKING_RIGHT_FRAMES);
 	
 
 
@@ -64,7 +65,7 @@ int main()
 		sprite.setTextureRect(boyIdleAnimation.getRect());
 		
 
-		window.clear(sf::Color::Magenta);
+		window.clear(sf::Color::White);
 		window.draw(sprite);
 
 		window.display();
