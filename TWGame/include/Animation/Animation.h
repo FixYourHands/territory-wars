@@ -1,17 +1,19 @@
 #pragma once
 #include "Animation/AnimationFrameBuilder.h"
 #include "Animation/SpriteSheet/WalkingAnimationFrames.h"
-//#include "Animation/SpriteSheet/PurpleWalkingAnimation.h"
-//#include "Animation/SpriteSheet/GreenWalkingAnimation.h"
-//#include "Animation/SpriteSheet/BlackWalkingAnimation.h"
-//#include "Animation/SpriteSheet/YellowWalkingAnimation.h"
+#include "Animation/SpriteSheet/SittingAnimationFrames.h"
+#include "Animation/SpriteSheet/PunchingAnimationFrames.h"
+#include "Animation/SpriteSheet/IdlingAnimationFrames.h"
+#include "Animation/SpriteSheet/DyingAnimationFrames.h"
+#include "Animation/SpriteSheet/GettingHitAnimationFrames.h"
+
 
 template <std::size_t N>
 class Animation
 {
 public:
 	using Milliseconds = float;
-
+	std::array<int, 5> temp;
 	
 	Animation(const std::array<DataStructures::FrameData, N>& frameArray);
 	void update(Milliseconds deltaTime);

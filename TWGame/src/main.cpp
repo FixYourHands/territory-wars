@@ -41,7 +41,8 @@ int main()
 	
 	int counter{ 0 };
 	
-	Animation<ANIMATION_PurpleWalkRightFront.size()> boyIdleAnimation(ANIMATION_GreenWalkLeftRear);
+	Animation<ANIMATION_BlackGetHitLeftRear.size()> boyIdleAnimation(ANIMATION_YellowGetHitLeftRear);
+
 	
 
 

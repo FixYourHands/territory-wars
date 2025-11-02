@@ -28,6 +28,11 @@
     <ClInclude Include="include\Animation\Animation.h" />
     <ClInclude Include="include\Animation\AnimationFrameBuilder.h" />
     <ClInclude Include="include\Animation\CharacterFrameConstants.h" />
+    <ClInclude Include="include\Animation\SpriteSheet\DyingAnimationFrames.h" />
+    <ClInclude Include="include\Animation\SpriteSheet\GettingHitAnimationFrames.h" />
+    <ClInclude Include="include\Animation\SpriteSheet\IdlingAnimationFrames.h" />
+    <ClInclude Include="include\Animation\SpriteSheet\PunchingAnimationFrames.h" />
+    <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h" />
     <ClInclude Include="include\MouseEventProcessor.h" />
     <ClInclude Include="include\CharacterSprite.h" />

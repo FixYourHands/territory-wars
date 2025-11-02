@@ -5,36 +5,18 @@
 
 
 namespace FrameSpeeds = CharacterFrameConstants::FrameSpeeds;
-namespace FrameSizes = CharacterFrameConstants::FrameLengths;
+namespace AnimationLengths = CharacterFrameConstants::AnimationLengths;
 
 
 namespace
 {
-	using BlackWalkAnimation = std::array<DataStructures::FrameData, FrameSizes::walkingFrameLength>;
-	using YellowWalkAnimation = std::array<DataStructures::FrameData, FrameSizes::walkingFrameLength>;
-	using GreenWalkAnimation = std::array<DataStructures::FrameData, FrameSizes::walkingFrameLength>;
-	using PurpleWalkAnimation = std::array<DataStructures::FrameData, FrameSizes::walkingFrameLength>;
-
-	constexpr Enumerations::RowNumber blackRowLevel_1{ 0 };
-	constexpr Enumerations::RowNumber blackRowLevel_2{ 1 };
-	constexpr Enumerations::RowNumber blackRowLevel_3{ 2 };
-	constexpr Enumerations::RowNumber blackRowLevel_4{ 3 };
-
-	constexpr Enumerations::RowNumber greenRowLevel_1{ 4 };
-	constexpr Enumerations::RowNumber greenRowLevel_2{ 5 };
-	constexpr Enumerations::RowNumber greenRowLevel_3{ 6 };
-	constexpr Enumerations::RowNumber greenRowLevel_4{ 7 };
-
-	constexpr Enumerations::RowNumber yellowRowLevel_1{ 8 };
-	constexpr Enumerations::RowNumber yellowRowLevel_2{ 9 };
-	constexpr Enumerations::RowNumber yellowRowLevel_3{ 10 };
-	constexpr Enumerations::RowNumber yellowRowLevel_4{ 11 };
-
-	constexpr Enumerations::RowNumber purpleRowLevel_1{ 12 };
-	constexpr Enumerations::RowNumber purpleRowLevel_2{ 13 };
-	constexpr Enumerations::RowNumber purpleRowLevel_3{ 14 };
-	constexpr Enumerations::RowNumber purpleRowLevel_4{ 15 };
+	using BlackWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
+	using YellowWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
+	using GreenWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
+	using PurpleWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
+	using namespace PixelCoordinates::FrameLevels;
 }
+
 
 static constexpr BlackWalkAnimation ANIMATION_BlackWalkRightFront{ Builder::buildWalkingAnimation<blackRowLevel_1>() };
 static constexpr BlackWalkAnimation ANIMATION_BlackWalkLeftFront{ Builder::buildWalkingAnimation<blackRowLevel_2>() };

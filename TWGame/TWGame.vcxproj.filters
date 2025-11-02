@@ -64,6 +64,21 @@
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h">
       <Filter>Header Files\Animation\SpriteSheet</Filter>
     </ClInclude>
+    <ClInclude Include="include\Animation\SpriteSheet\DyingAnimationFrames.h">
+      <Filter>Header Files\Animation\SpriteSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteSheet\GettingHitAnimationFrames.h">
+      <Filter>Header Files\Animation\SpriteSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteSheet\IdlingAnimationFrames.h">
+      <Filter>Header Files\Animation\SpriteSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteSheet\PunchingAnimationFrames.h">
+      <Filter>Header Files\Animation\SpriteSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h">
+      <Filter>Header Files\Animation\SpriteSheet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation\Animation.tpp">
