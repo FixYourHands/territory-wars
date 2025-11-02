@@ -27,7 +27,7 @@
   <ItemGroup>
     <ClInclude Include="include\Animation\Animation.h" />
     <ClInclude Include="include\Animation\AnimationFrameBuilder.h" />
-    <ClInclude Include="include\Animation\CharacterFrameConstants.h" />
+    <ClInclude Include="include\Animation\AnimationFrameConstants.h" />
     <ClInclude Include="include\Animation\SpriteSheet\DyingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\GettingHitAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\IdlingAnimationFrames.h" />

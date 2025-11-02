@@ -1,10 +1,10 @@
 #pragma once
-#include "Animation/CharacterFrameConstants.h"
+#include "Animation/AnimationFrameConstants.h"
 #include <SFML/Graphics.hpp>
 
 namespace
 {
-	namespace FrameSpeeds = CharacterFrameConstants::FrameSpeeds;
+	namespace FrameSpeeds = AnimationFrameConstants::FrameSpeeds;
 }
 
 namespace Enumerations
@@ -103,7 +103,7 @@ namespace Builder
 	{
 		constexpr int xIndex{ static_cast<int>(X) };
 		constexpr int yIndex{ static_cast<int>(Y) };
-		constexpr DataStructures::SpriteSheetTextureData temp{ PixelCoordinates::columnCoordinatesArray[xIndex],PixelCoordinates::rowCoordinatesArray[yIndex],{CharacterFrameConstants::FrameDimensions::frameWidth,CharacterFrameConstants::FrameDimensions::frameHeight} };
+		constexpr DataStructures::SpriteSheetTextureData temp{ PixelCoordinates::columnCoordinatesArray[xIndex],PixelCoordinates::rowCoordinatesArray[yIndex],{AnimationFrameConstants::FrameDimensions::frameWidth,AnimationFrameConstants::FrameDimensions::frameHeight} };
 		return DataStructures::FrameData{ temp,duration };
 	}
 

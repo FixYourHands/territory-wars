@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace CharacterFrameConstants
+namespace AnimationFrameConstants
 {
 	namespace FrameDimensions
 	{

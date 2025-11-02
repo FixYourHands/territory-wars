@@ -1,11 +1,11 @@
 #pragma once
 #include <array>
-#include "Animation/CharacterFrameConstants.h"
+#include "Animation/AnimationFrameConstants.h"
 #include "Animation/AnimationFrameBuilder.h"
 
 
-namespace FrameSpeeds = CharacterFrameConstants::FrameSpeeds;
-namespace AnimationLengths = CharacterFrameConstants::AnimationLengths;
+namespace FrameSpeeds = AnimationFrameConstants::FrameSpeeds;
+namespace AnimationLengths = AnimationFrameConstants::AnimationLengths;
 
 
 namespace

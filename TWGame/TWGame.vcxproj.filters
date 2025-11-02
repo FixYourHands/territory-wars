@@ -58,7 +58,7 @@
     <ClInclude Include="include\Animation\AnimationFrameBuilder.h">
       <Filter>Header Files\Animation</Filter>
     </ClInclude>
-    <ClInclude Include="include\Animation\CharacterFrameConstants.h">
+    <ClInclude Include="include\Animation\AnimationFrameConstants.h">
       <Filter>Header Files\Animation</Filter>
     </ClInclude>
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h">
