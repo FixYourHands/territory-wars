@@ -32,6 +32,34 @@ namespace AnimationFrameConstants
 		static constexpr int dyingFrameLength{ 4 };
 	}
 
+	namespace SpriteAttributes
+	{
+		enum class SoldierState
+		{
+			Idle,
+			Walking,
+			Sitting,
+			Punching,
+			GettingHit,
+			Dying
+		};
+		enum class SoldierDirection
+		{
+			RightFront,
+			LeftFront,
+			LeftRear,
+			RightRear
+		};
+
+		enum class SoldierColor
+		{
+			Black,
+			Green,
+			Yellow,
+			Purple
+		};
+	}
+
 
 	
 }

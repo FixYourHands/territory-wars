@@ -1,12 +1,13 @@
 #pragma once
 #include <array>
+#include <vector>
 #include "Animation/AnimationFrameConstants.h"
 #include "Animation/AnimationFrameBuilder.h"
 
 
+
 namespace FrameSpeeds = AnimationFrameConstants::FrameSpeeds;
 namespace AnimationLengths = AnimationFrameConstants::AnimationLengths;
-
 
 namespace
 {
@@ -14,6 +15,7 @@ namespace
 	using YellowWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
 	using GreenWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
 	using PurpleWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
+	using WalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
 	using namespace PixelCoordinates::FrameLevels;
 }
 
@@ -37,3 +39,27 @@ static constexpr PurpleWalkAnimation ANIMATION_PurpleWalkRightFront{ Builder::bu
 static constexpr PurpleWalkAnimation ANIMATION_PurpleWalkLeftFront{ Builder::buildWalkingAnimation<purpleRowLevel_2>() };
 static constexpr PurpleWalkAnimation ANIMATION_PurpleWalkLeftRear{ Builder::buildWalkingAnimation<purpleRowLevel_3>() };
 static constexpr PurpleWalkAnimation ANIMATION_PurpleWalkRightRear{ Builder::buildWalkingAnimation<purpleRowLevel_4>() };
+
+
+
+static inline std::vector<const WalkAnimation*> allWalkingAnimations
+{
+	&ANIMATION_BlackWalkRightFront,
+	&ANIMATION_BlackWalkLeftFront,
+	&ANIMATION_BlackWalkLeftRear,
+	&ANIMATION_BlackWalkRightRear,
+	&ANIMATION_GreenWalkRightFront,
+	&ANIMATION_GreenWalkLeftFront,
+	&ANIMATION_GreenWalkLeftRear,
+	&ANIMATION_GreenWalkRightRear,
+	&ANIMATION_YellowWalkRightFront,
+	&ANIMATION_YellowWalkLeftFront,
+	&ANIMATION_YellowWalkLeftRear,
+	&ANIMATION_YellowWalkRightRear,
+	&ANIMATION_PurpleWalkRightFront,
+	&ANIMATION_PurpleWalkLeftFront,
+	&ANIMATION_PurpleWalkLeftRear,
+	&ANIMATION_PurpleWalkRightRear
+};
+
+

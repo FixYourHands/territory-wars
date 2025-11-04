@@ -38,6 +38,9 @@
     <ClCompile Include="src\MouseEventProcessor.cpp">
       <Filter>Source Files\Input</Filter>
     </ClCompile>
+    <ClCompile Include="src\AnimationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\CharacterSprite.h">
@@ -78,6 +81,9 @@
     </ClInclude>
     <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h">
       <Filter>Header Files\Animation\SpriteSheet</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\AnimationManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

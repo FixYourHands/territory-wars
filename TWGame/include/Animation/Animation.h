@@ -22,7 +22,7 @@ public:
 private:
 	size_t currentFrame;
 	Milliseconds elapsedTime;
-	const size_t totalFrames;
+	size_t totalFrames;
 	const std::array<DataStructures::FrameData,N>* frames;
 	
 };

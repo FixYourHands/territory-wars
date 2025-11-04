@@ -41,10 +41,10 @@ int main()
 	
 	int counter{ 0 };
 	
-	Animation<ANIMATION_BlackGetHitLeftRear.size()> boyIdleAnimation(ANIMATION_YellowGetHitLeftRear);
+	Animation<ANIMATION_BlackIdleRightFront.size()> boyIdleAnimation(ANIMATION_YellowIdleRightFront);
 
 	
-
+	
 
 	while (window.isOpen())
 	{

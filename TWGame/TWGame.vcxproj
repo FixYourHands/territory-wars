@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\AnimationManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MouseEventProcessor.cpp" />
     <ClCompile Include="src\PlayerSprite.cpp" />
@@ -28,6 +29,7 @@
     <ClInclude Include="include\Animation\Animation.h" />
     <ClInclude Include="include\Animation\AnimationFrameBuilder.h" />
     <ClInclude Include="include\Animation\AnimationFrameConstants.h" />
+    <ClInclude Include="include\Animation\AnimationManager.h" />
     <ClInclude Include="include\Animation\SpriteSheet\DyingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\GettingHitAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\IdlingAnimationFrames.h" />
