@@ -24,6 +24,9 @@
     <Filter Include="Header Files\Animation\SpriteSheet">
       <UniqueIdentifier>{2d8adc9c-a496-44d6-b742-a671a0e9e2bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Animation">
+      <UniqueIdentifier>{e3dad052-5f0b-4805-bd95-1767428d614f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -37,9 +40,6 @@
     </ClCompile>
     <ClCompile Include="src\MouseEventProcessor.cpp">
       <Filter>Source Files\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="src\AnimationManager.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,5 +90,6 @@
     <None Include="include\Animation\Animation.tpp">
       <Filter>Header Files\Animation</Filter>
     </None>
+    <None Include="include\Animation\AnimationManager.tpp" />
   </ItemGroup>
 </Project>

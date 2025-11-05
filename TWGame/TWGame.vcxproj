@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\AnimationManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MouseEventProcessor.cpp" />
     <ClCompile Include="src\PlayerSprite.cpp" />
@@ -43,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation\Animation.tpp" />
+    <None Include="include\Animation\AnimationManager.tpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

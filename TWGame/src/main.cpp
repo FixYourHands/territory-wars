@@ -2,6 +2,7 @@
 #include <iostream>
 #include "MouseEventProcessor.h"
 #include "Animation/Animation.h"
+#include "Animation/AnimationManager.h"
 
 
 using Circle = sf::CircleShape;
@@ -42,6 +43,10 @@ int main()
 	int counter{ 0 };
 	
 	Animation<ANIMATION_BlackIdleRightFront.size()> boyIdleAnimation(ANIMATION_YellowIdleRightFront);
+
+	using namespace AnimationFrameConstants::SpriteAttributes;
+	boyIdleAnimation.frames = (*AnimationManager<10>::getWalkAnimationPointer(SoldierColor::Black, SoldierDirection::LeftFront)).data();
+	boyIdleAnimation.setAnimationLength(AnimationFrameConstants::AnimationLengths::walkingFrameLength);
 
 	
 	

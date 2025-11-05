@@ -42,6 +42,7 @@ static constexpr PurpleWalkAnimation ANIMATION_PurpleWalkRightRear{ Builder::bui
 
 
 
+/*
 static inline std::vector<const WalkAnimation*> allWalkingAnimations
 {
 	&ANIMATION_BlackWalkRightFront,
@@ -61,5 +62,5 @@ static inline std::vector<const WalkAnimation*> allWalkingAnimations
 	&ANIMATION_PurpleWalkLeftRear,
 	&ANIMATION_PurpleWalkRightRear
 };
-
+*/
 
