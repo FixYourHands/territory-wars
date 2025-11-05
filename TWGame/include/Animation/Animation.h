@@ -1,35 +1,32 @@
 #pragma once
 #include "Animation/AnimationFrameBuilder.h"
 #include "Animation/AnimationFrameConstants.h"
-#include "Animation/SpriteSheet/WalkingAnimationFrames.h"
-#include "Animation/SpriteSheet/SittingAnimationFrames.h"
-#include "Animation/SpriteSheet/PunchingAnimationFrames.h"
-#include "Animation/SpriteSheet/IdlingAnimationFrames.h"
-#include "Animation/SpriteSheet/DyingAnimationFrames.h"
-#include "Animation/SpriteSheet/GettingHitAnimationFrames.h"
+#include "Animation/AnimationManager.h"
 
 
-template <std::size_t N>
 class Animation
 {
 public:
 	using Milliseconds = float;
-	std::array<int, 5> temp;
+	const DataStructures::FrameData* frames;
 	
-	Animation(const std::array<DataStructures::FrameData, N>& frameArray);
+	
+	
+public:
+	Animation();
 	void update(Milliseconds deltaTime);
 	void resetTimes();
-	void setAnimationLength(const size_t frameLength);
-	//void getFramePointer(const AnimationFrameConstants::SpriteAttributes::SoldierState);
+	void setFramePointer(const AnimationFrameConstants::SpriteAttributes::SoldierColor color,const AnimationFrameConstants::SpriteAttributes::SoldierState state, AnimationFrameConstants::SpriteAttributes::SoldierDirection direction);
 	sf::IntRect getRect() const;
-	const DataStructures::FrameData* frames;
+	
 
 private:
 	size_t currentFrame;
 	Milliseconds elapsedTime;
 	size_t totalFrames;
+
+private:
+	void setAnimationLength(const size_t frameLength);
 	
 	
 };
-
-#include "Animation.tpp"

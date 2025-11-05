@@ -42,12 +42,12 @@ int main()
 	
 	int counter{ 0 };
 	
-	Animation<ANIMATION_BlackIdleRightFront.size()> boyIdleAnimation(ANIMATION_YellowIdleRightFront);
+	Animation boyIdleAnimation;
 
 	using namespace AnimationFrameConstants::SpriteAttributes;
-	boyIdleAnimation.frames = (*AnimationManager<10>::getWalkAnimationPointer(SoldierColor::Black, SoldierDirection::LeftFront)).data();
-	boyIdleAnimation.setAnimationLength(AnimationFrameConstants::AnimationLengths::walkingFrameLength);
 
+
+	boyIdleAnimation.setFramePointer(SoldierColor::Black,SoldierState::Punching, SoldierDirection::LeftFront);
 	
 	
 

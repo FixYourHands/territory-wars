@@ -177,6 +177,11 @@ class AnimationManager
 
 public:
 	static constexpr const  std::array<DataStructures::FrameData, N>* getWalkAnimationPointer(const SoldierColor color, const SoldierDirection direction);
+	static constexpr const  std::array<DataStructures::FrameData, N>* getIdleAnimationPointer(const SoldierColor color, const SoldierDirection direction);
+	static constexpr const  std::array<DataStructures::FrameData, N>* getSitAnimationPointer(const SoldierColor color, const SoldierDirection direction);
+	static constexpr const  std::array<DataStructures::FrameData, N>* getPunchAnimationPointer(const SoldierColor color, const SoldierDirection direction);
+	static constexpr const  std::array<DataStructures::FrameData, N>* getGetHitAnimationPointer(const SoldierColor color, const SoldierDirection direction);
+	static constexpr const  std::array<DataStructures::FrameData, N>* getDieAnimationPointer(const SoldierColor color, const SoldierDirection direction);
 };
 
 #include "AnimationManager.tpp"

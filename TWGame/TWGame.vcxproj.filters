@@ -41,6 +41,9 @@
     <ClCompile Include="src\MouseEventProcessor.cpp">
       <Filter>Source Files\Input</Filter>
     </ClCompile>
+    <ClCompile Include="src\Animation.cpp">
+      <Filter>Source Files\Animation</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\CharacterSprite.h">
@@ -87,9 +90,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\Animation\Animation.tpp">
-      <Filter>Header Files\Animation</Filter>
-    </None>
     <None Include="include\Animation\AnimationManager.tpp" />
   </ItemGroup>
 </Project>

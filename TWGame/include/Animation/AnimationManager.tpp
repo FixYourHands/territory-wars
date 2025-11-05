@@ -15,7 +15,7 @@ template <size_t N>
 	 int index{ static_cast<int>(color) * offSetPerColor };
 	 index += static_cast<int>(direction);
 
-	 return allWalkingAnimations[index];
+	 return allIdleAnimations[index];
  }
 
  template <size_t N>
@@ -25,7 +25,7 @@ template <size_t N>
 	 int index{ static_cast<int>(color) * offSetPerColor };
 	 index += static_cast<int>(direction);
 
-	 return allWalkingAnimations[index];
+	 return allSittingAnimations[index];
  }
 
  template <size_t N>
@@ -35,7 +35,7 @@ template <size_t N>
 	 int index{ static_cast<int>(color) * offSetPerColor };
 	 index += static_cast<int>(direction);
 
-	 return allWalkingAnimations[index];
+	 return allPunchingAnimations[index];
  }
 
  template <size_t N>
@@ -45,7 +45,7 @@ template <size_t N>
 	 int index{ static_cast<int>(color) * offSetPerColor };
 	 index += static_cast<int>(direction);
 
-	 return allWalkingAnimations[index];
+	 return allGettingHitAnimations[index];
  }
 
  template <size_t N>
@@ -55,5 +55,5 @@ template <size_t N>
 	 int index{ static_cast<int>(color) * offSetPerColor };
 	 index += static_cast<int>(direction);
 
-	 return allWalkingAnimations[index];
+	 return allDyingAnimations[index];
  }

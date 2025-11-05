@@ -41,26 +41,3 @@ static constexpr PurpleWalkAnimation ANIMATION_PurpleWalkLeftRear{ Builder::buil
 static constexpr PurpleWalkAnimation ANIMATION_PurpleWalkRightRear{ Builder::buildWalkingAnimation<purpleRowLevel_4>() };
 
 
-
-/*
-static inline std::vector<const WalkAnimation*> allWalkingAnimations
-{
-	&ANIMATION_BlackWalkRightFront,
-	&ANIMATION_BlackWalkLeftFront,
-	&ANIMATION_BlackWalkLeftRear,
-	&ANIMATION_BlackWalkRightRear,
-	&ANIMATION_GreenWalkRightFront,
-	&ANIMATION_GreenWalkLeftFront,
-	&ANIMATION_GreenWalkLeftRear,
-	&ANIMATION_GreenWalkRightRear,
-	&ANIMATION_YellowWalkRightFront,
-	&ANIMATION_YellowWalkLeftFront,
-	&ANIMATION_YellowWalkLeftRear,
-	&ANIMATION_YellowWalkRightRear,
-	&ANIMATION_PurpleWalkRightFront,
-	&ANIMATION_PurpleWalkLeftFront,
-	&ANIMATION_PurpleWalkLeftRear,
-	&ANIMATION_PurpleWalkRightRear
-};
-*/
-
