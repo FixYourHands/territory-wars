@@ -3,6 +3,7 @@
 #include "MouseEventProcessor.h"
 #include "Animation/Animation.h"
 #include "Animation/AnimationManager.h"
+#include "SoldierSprite.h"
 
 
 using Circle = sf::CircleShape;
@@ -41,13 +42,18 @@ int main()
 	auto deltaTime{ 0.f };
 	
 	int counter{ 0 };
+	sprite.setPosition(sf::Vector2f{ 200.f, 200.f });
 	
 	Animation boyIdleAnimation;
+	SoldierSprite soldierSprite{ texture,SoldierColor::Green, sf::Vector2i{ 100, 100 } };
+	soldierSprite.setDirection(AnimationFrameConstants::SpriteAttributes::SoldierDirection::LeftFront);
+	soldierSprite.setState(AnimationFrameConstants::SpriteAttributes::SoldierState::Idle);
+	
 
 	using namespace AnimationFrameConstants::SpriteAttributes;
 
 
-	boyIdleAnimation.setFramePointer(SoldierColor::Black,SoldierState::Punching, SoldierDirection::LeftFront);
+	boyIdleAnimation.setFramePointer(SoldierColor::Green,SoldierState::Punching, SoldierDirection::LeftFront);
 	
 	
 
@@ -67,11 +73,13 @@ int main()
 			
 		}
 		boyIdleAnimation.update(deltaTime);
+		soldierSprite.update(deltaTime);
 		sprite.setTextureRect(boyIdleAnimation.getRect());
 		
 
 		window.clear(sf::Color::White);
 		window.draw(sprite);
+		soldierSprite.draw(window);
 
 		window.display();
 		

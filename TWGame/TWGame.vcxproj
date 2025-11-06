@@ -22,8 +22,8 @@
     <ClCompile Include="src\Animation.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\MouseEventProcessor.cpp" />
-    <ClCompile Include="src\PlayerSprite.cpp" />
-    <ClCompile Include="src\TWSprite.cpp" />
+    <ClCompile Include="src\SoldierSprite.cpp" />
+    <ClCompile Include="src\BaseSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Animation\Animation.h" />
@@ -37,9 +37,9 @@
     <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h" />
     <ClInclude Include="include\MouseEventProcessor.h" />
-    <ClInclude Include="include\CharacterSprite.h" />
+    <ClInclude Include="include\SoldierSprite.h" />
     <ClInclude Include="include\resource.h" />
-    <ClInclude Include="include\TWSprite.h" />
+    <ClInclude Include="include\BaseSprite.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation\AnimationManager.tpp" />

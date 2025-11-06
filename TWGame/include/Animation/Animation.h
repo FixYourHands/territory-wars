@@ -13,6 +13,7 @@ public:
 	
 	
 public:
+	Animation(const AnimationFrameConstants::SpriteAttributes::SoldierColor color);
 	Animation();
 	void update(Milliseconds deltaTime);
 	void resetTimes();

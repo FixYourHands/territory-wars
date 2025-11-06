@@ -4,6 +4,12 @@ Animation::Animation()
 	: frames(nullptr), elapsedTime(0.f), totalFrames(0), currentFrame(0) {
 }
 
+Animation::Animation(const AnimationFrameConstants::SpriteAttributes::SoldierColor color)
+	: frames(nullptr),elapsedTime(0.f), totalFrames(AnimationFrameConstants::AnimationLengths::idleFrameLength), currentFrame(0) 
+{
+	setFramePointer(color, AnimationFrameConstants::SpriteAttributes::SoldierState::Idle, AnimationFrameConstants::SpriteAttributes::SoldierDirection::RightFront);
+}
+
 
 void Animation::update(Milliseconds deltaTime)
 {
