@@ -3,7 +3,9 @@
 #include "MouseEventProcessor.h"
 #include "Animation/Animation.h"
 #include "Animation/AnimationManager.h"
-#include "SoldierSprite.h"
+#include "Sprite/SoldierSprite.h"
+#include <vector>
+#include <cmath>
 
 
 using Circle = sf::CircleShape;
@@ -43,11 +45,26 @@ int main()
 	
 	int counter{ 0 };
 	sprite.setPosition(sf::Vector2f{ 200.f, 200.f });
+
+	std::vector<SoldierSprite> purpleArmy(12, { texture,SoldierColor::Green,sf::Vector2i{0,500} });
+	for (int i = 0; i < purpleArmy.size(); i++)
+	{
+		purpleArmy[i]._sprite.setPosition(sf::Vector2f{i * 50.f,500.f});
+	}
 	
 	Animation boyIdleAnimation;
-	SoldierSprite soldierSprite{ texture,SoldierColor::Green, sf::Vector2i{ 100, 100 } };
-	soldierSprite.setDirection(AnimationFrameConstants::SpriteAttributes::SoldierDirection::LeftFront);
-	soldierSprite.setState(AnimationFrameConstants::SpriteAttributes::SoldierState::Idle);
+	SoldierSprite soldierSprite1{ texture,SoldierColor::Green, sf::Vector2i{ 100, 100 } };
+	SoldierSprite soldierSprite2{ texture,SoldierColor::Yellow, sf::Vector2i{ 200, 100 } };
+	SoldierSprite soldierSprite3{ texture,SoldierColor::Purple, sf::Vector2i{ 300, 100 } };
+	SoldierSprite soldierSprite4{ texture,SoldierColor::Black, sf::Vector2i{ 400, 100 } };
+	SoldierSprite soldierSprite5{ texture,SoldierColor::Green, sf::Vector2i{ 500, 100 } };
+	SoldierSprite soldierSprite6{ texture,SoldierColor::Green, sf::Vector2i{ 600, 100 } };
+
+	soldierSprite1.setState(SoldierState::Idle);
+	soldierSprite2.setState(SoldierState::Punching);
+	soldierSprite3.setState(SoldierState::Walking);
+	soldierSprite4.setState(SoldierState::Sitting);
+	soldierSprite5.setState(SoldierState::Idle);
 	
 
 	using namespace AnimationFrameConstants::SpriteAttributes;
@@ -55,11 +72,13 @@ int main()
 
 	boyIdleAnimation.setFramePointer(SoldierColor::Green,SoldierState::Punching, SoldierDirection::LeftFront);
 	
-	
+	float statusTime{ 0.f };
+	bool drawOnce = false;
 
 	while (window.isOpen())
 	{
 		deltaTime = clock.restart().asSeconds();
+		statusTime += deltaTime;
 		while (const std::optional event = window.pollEvent())
 		{
 			if (event->is<Event::Closed>())
@@ -72,14 +91,43 @@ int main()
 
 			
 		}
+
+		if (statusTime >= 5.f)
+		{
+			if (!drawOnce)
+				purpleArmy.push_back(SoldierSprite{ texture,SoldierColor::Purple, sf::Vector2i{300,200} });
+			statusTime = 0.f;
+			drawOnce = true;
+		}
+
 		boyIdleAnimation.update(deltaTime);
-		soldierSprite.update(deltaTime);
+		soldierSprite1.update(deltaTime);
+		soldierSprite2.update(deltaTime);
+		soldierSprite3.update(deltaTime);
+		soldierSprite4.update(deltaTime);
+		soldierSprite5.update(deltaTime);
+		soldierSprite6.update(deltaTime);
 		sprite.setTextureRect(boyIdleAnimation.getRect());
+
+		for (auto& soldier : purpleArmy)
+		{
+			soldier.update(deltaTime);
+		}
 		
 
 		window.clear(sf::Color::White);
 		window.draw(sprite);
-		soldierSprite.draw(window);
+		soldierSprite1.draw(window);
+		soldierSprite2.draw(window);
+		soldierSprite3.draw(window);
+		soldierSprite4.draw(window);
+		soldierSprite5.draw(window);
+		soldierSprite6.draw(window);
+
+		for (auto& soldier : purpleArmy)
+		{
+			soldier.draw(window);
+		}
 
 		window.display();
 		

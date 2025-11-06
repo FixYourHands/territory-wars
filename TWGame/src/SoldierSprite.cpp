@@ -1,10 +1,12 @@
-#include "SoldierSprite.h"
+#include "Sprite/SoldierSprite.h"
 
 using namespace AnimationFrameConstants::SpriteAttributes;
 constexpr float SCALE_FACTOR{ 2.f };
+constexpr float SPEED_FACTOR{ 20.f };
+
 
 SoldierSprite::SoldierSprite(const sf::Texture& texture, const SoldierColor soldierColor, const sf::Vector2i&& position)
-	: BaseSprite(texture), _color(soldierColor), _currentState(SoldierState::Sitting), _direction(SoldierDirection::RightFront), health(100) 
+	: BaseSprite(texture), _color(soldierColor), _currentState(SoldierState::Sitting), _direction(SoldierDirection::RightFront), _health(100), _speed(SPEED_FACTOR)
 {
 	_animation.setFramePointer(soldierColor, _currentState, _direction);
 	_sprite.setScale(sf::Vector2(SCALE_FACTOR, SCALE_FACTOR));

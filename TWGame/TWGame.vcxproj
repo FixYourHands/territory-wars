@@ -37,9 +37,10 @@
     <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h" />
     <ClInclude Include="include\MouseEventProcessor.h" />
-    <ClInclude Include="include\SoldierSprite.h" />
     <ClInclude Include="include\resource.h" />
-    <ClInclude Include="include\BaseSprite.h" />
+    <ClInclude Include="include\Sprite\BaseSprite.h" />
+    <ClInclude Include="include\Sprite\SoldierSprite.h" />
+    <ClInclude Include="include\Sprite\SpriteConstants.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation\AnimationManager.tpp" />

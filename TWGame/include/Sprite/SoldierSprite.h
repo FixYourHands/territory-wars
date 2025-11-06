@@ -1,5 +1,5 @@
 #pragma once
-#include "BaseSprite.h"
+#include "Sprite/BaseSprite.h"
 #include "Animation/AnimationFrameConstants.h"
 #include "Animation/Animation.h"
  
@@ -18,6 +18,7 @@ private:
 	AnimationFrameConstants::SpriteAttributes::SoldierColor _color;
 	AnimationFrameConstants::SpriteAttributes::SoldierDirection _direction;
 	Animation _animation;
-	int health;
+	int _health;
+	float _speed;
 
 };

@@ -27,15 +27,12 @@
     <Filter Include="Source Files\Animation">
       <UniqueIdentifier>{e3dad052-5f0b-4805-bd95-1767428d614f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Sprite">
+      <UniqueIdentifier>{f8c41ca6-5f17-4e24-87b6-32b5025b7d90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\TWSprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\PlayerSprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\MouseEventProcessor.cpp">
@@ -44,15 +41,15 @@
     <ClCompile Include="src\Animation.cpp">
       <Filter>Source Files\Animation</Filter>
     </ClCompile>
+    <ClCompile Include="src\SoldierSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\BaseSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\CharacterSprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\TWSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\MouseEventProcessor.h">
@@ -86,7 +83,16 @@
       <Filter>Header Files\Animation\SpriteSheet</Filter>
     </ClInclude>
     <ClInclude Include="include\Animation\AnimationManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sprite\BaseSprite.h">
+      <Filter>Header Files\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sprite\SoldierSprite.h">
+      <Filter>Header Files\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sprite\SpriteConstants.h">
+      <Filter>Header Files\Sprite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
