@@ -13,11 +13,11 @@ public:
 	
 	
 public:
-	Animation(const AnimationFrameConstants::SpriteAttributes::SoldierColor color);
+	Animation(const AnimationFrameConstants::AnimationAttributes::SoldierColor color);
 	Animation();
 	void update(Milliseconds deltaTime);
 	void resetTimes();
-	void setFramePointer(const AnimationFrameConstants::SpriteAttributes::SoldierColor color,const AnimationFrameConstants::SpriteAttributes::SoldierState state, AnimationFrameConstants::SpriteAttributes::SoldierDirection direction);
+	void setFramePointer(const AnimationFrameConstants::AnimationAttributes::SoldierColor color,const AnimationFrameConstants::AnimationAttributes::AnimationState state, AnimationFrameConstants::AnimationAttributes::SoldierDirection direction);
 	sf::IntRect getRect() const;
 	
 

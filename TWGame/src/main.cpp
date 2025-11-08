@@ -60,17 +60,17 @@ int main()
 	SoldierSprite soldierSprite5{ texture,SoldierColor::Green, sf::Vector2i{ 500, 100 } };
 	SoldierSprite soldierSprite6{ texture,SoldierColor::Green, sf::Vector2i{ 600, 100 } };
 
-	soldierSprite1.setState(SoldierState::Idle);
-	soldierSprite2.setState(SoldierState::Punching);
-	soldierSprite3.setState(SoldierState::Walking);
-	soldierSprite4.setState(SoldierState::Sitting);
-	soldierSprite5.setState(SoldierState::Idle);
+	soldierSprite1.setSoldierState(SpriteConstants::SoldierState::Idle);
+	soldierSprite2.setSoldierState(SpriteConstants::SoldierState::Punching);
+	soldierSprite3.setSoldierState(SpriteConstants::SoldierState::Walking);
+	soldierSprite4.setSoldierState(SpriteConstants::SoldierState::Sitting);
+	soldierSprite5.setSoldierState(SpriteConstants::SoldierState::Idle);
 	
 
-	using namespace AnimationFrameConstants::SpriteAttributes;
+	using namespace AnimationFrameConstants::AnimationAttributes;
 
 
-	boyIdleAnimation.setFramePointer(SoldierColor::Green,SoldierState::Punching, SoldierDirection::LeftFront);
+	boyIdleAnimation.setFramePointer(SoldierColor::Green,AnimationState::Punching, SoldierDirection::West);
 	
 	float statusTime{ 0.f };
 	bool drawOnce = false;

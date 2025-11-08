@@ -40,7 +40,7 @@
     <ClInclude Include="include\resource.h" />
     <ClInclude Include="include\Sprite\BaseSprite.h" />
     <ClInclude Include="include\Sprite\SoldierSprite.h" />
-    <ClInclude Include="include\Sprite\SpriteConstants.h" />
+    <ClInclude Include="include\Sprite\SoldierConstants.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation\AnimationManager.tpp" />

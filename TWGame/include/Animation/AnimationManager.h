@@ -9,7 +9,7 @@
 #include "Animation/SpriteSheet/GettingHitAnimationFrames.h"
 #include <vector>
 
-using namespace AnimationFrameConstants::SpriteAttributes;
+using namespace AnimationFrameConstants::AnimationAttributes;
 namespace FrameSpeeds = AnimationFrameConstants::FrameSpeeds;
 namespace AnimationLengths = AnimationFrameConstants::AnimationLengths;
 namespace

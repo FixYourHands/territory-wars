@@ -4,10 +4,10 @@ Animation::Animation()
 	: frames(nullptr), elapsedTime(0.f), totalFrames(0), currentFrame(0) {
 }
 
-Animation::Animation(const AnimationFrameConstants::SpriteAttributes::SoldierColor color)
+Animation::Animation(const AnimationFrameConstants::AnimationAttributes::SoldierColor color)
 	: frames(nullptr),elapsedTime(0.f), totalFrames(AnimationFrameConstants::AnimationLengths::idleFrameLength), currentFrame(0) 
 {
-	setFramePointer(color, AnimationFrameConstants::SpriteAttributes::SoldierState::Idle, AnimationFrameConstants::SpriteAttributes::SoldierDirection::RightFront);
+	setFramePointer(color, AnimationFrameConstants::AnimationAttributes::AnimationState::Idle, AnimationFrameConstants::AnimationAttributes::SoldierDirection::South);
 }
 
 
@@ -24,34 +24,34 @@ void Animation::update(Milliseconds deltaTime)
 }
 
 
-void Animation::setFramePointer(const AnimationFrameConstants::SpriteAttributes::SoldierColor color, const AnimationFrameConstants::SpriteAttributes::SoldierState state, AnimationFrameConstants::SpriteAttributes::SoldierDirection direction)
+void Animation::setFramePointer(const AnimationFrameConstants::AnimationAttributes::SoldierColor color, const AnimationFrameConstants::AnimationAttributes::AnimationState state, AnimationFrameConstants::AnimationAttributes::SoldierDirection direction)
 {
-	using namespace AnimationFrameConstants::SpriteAttributes;
+	using namespace AnimationFrameConstants::AnimationAttributes;
 	using namespace AnimationFrameConstants::AnimationLengths;
 
 	switch (state)
 	{
-	case SoldierState::Walking:
+	case AnimationState::Walking:
 		frames = (*AnimationManager<walkingFrameLength>::getWalkAnimationPointer(color, direction)).data();
 		setAnimationLength(walkingFrameLength);
 		break;
-	case SoldierState::Idle:
+	case AnimationState::Idle:
 		frames = (*AnimationManager<idleFrameLength>::getIdleAnimationPointer(color, direction)).data();
 		setAnimationLength(idleFrameLength);
 		break;
-	case SoldierState::Sitting:
+	case AnimationState::Sitting:
 		frames = (*AnimationManager<sittingFrameLength>::getSitAnimationPointer(color, direction)).data();
 		setAnimationLength(sittingFrameLength);
 		break;
-	case SoldierState::Punching:
+	case AnimationState::Punching:
 		frames = (*AnimationManager<punchingFrameLength>::getPunchAnimationPointer(color, direction)).data();
 		setAnimationLength(punchingFrameLength);
 		break;
-	case SoldierState::GettingHit:
+	case AnimationState::GettingHit:
 		frames = (*AnimationManager<gettingHitFrameLength>::getGetHitAnimationPointer(color, direction)).data();
 		setAnimationLength(gettingHitFrameLength);
 		break;
-	case SoldierState::Dying:
+	case AnimationState::Dying:
 		frames = (*AnimationManager<dyingFrameLength>::getDieAnimationPointer(color, direction)).data();
 		setAnimationLength(dyingFrameLength);
 		break;
