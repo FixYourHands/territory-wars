@@ -63,6 +63,8 @@ void SoldierSprite::setAnimationDirection(const SoldierDirection newDirection) {
 void SoldierSprite::setMovementDirection(const SoldierDirection direction) {
 	_velocity = getIsometricVelocity(direction);
 	setAnimationDirection(direction);
+	setAnimationState(AnimationState::Walking);
+	setSoldierState(SpriteConstants::SoldierState::Walking);
 }
 
 void SoldierSprite::stopMovement() {

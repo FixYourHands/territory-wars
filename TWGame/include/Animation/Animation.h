@@ -10,8 +10,6 @@ public:
 	using Milliseconds = float;
 	const DataStructures::FrameData* frames;
 	
-	
-	
 public:
 	Animation(const AnimationFrameConstants::AnimationAttributes::SoldierColor color);
 	Animation();
@@ -20,14 +18,12 @@ public:
 	void setFramePointer(const AnimationFrameConstants::AnimationAttributes::SoldierColor color,const AnimationFrameConstants::AnimationAttributes::AnimationState state, AnimationFrameConstants::AnimationAttributes::SoldierDirection direction);
 	sf::IntRect getRect() const;
 	
-
 private:
 	size_t currentFrame;
 	Milliseconds elapsedTime;
 	size_t totalFrames;
 
 private:
-	void setAnimationLength(const size_t frameLength);
-	
+	void setAnimationLength(const size_t frameLength);	
 	
 };
