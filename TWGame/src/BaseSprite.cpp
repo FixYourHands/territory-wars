@@ -2,3 +2,5 @@
 
 BaseSprite::BaseSprite(const sf::Texture& texture) :_sprite(texture){}
 
+BaseSprite::~BaseSprite() = default;
+

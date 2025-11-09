@@ -22,7 +22,7 @@ constexpr sf::Vector2f getIsometricVelocity(const SoldierDirection direction)
 }
 
 SoldierSprite::SoldierSprite(const sf::Texture& texture, const SoldierColor soldierColor, const sf::Vector2i&& position)
-	: BaseSprite(texture), _color(soldierColor), _animationState(AnimationState::Sitting), _direction(SoldierDirection::South), _health(100), _velocity(sf::Vector2f{0.f,0.f})
+	: BaseSprite(texture), _color(soldierColor), _animationState(AnimationState::Sitting),_soldierState(SpriteConstants::SoldierState::Sitting), _direction(SoldierDirection::South), _health(100), _velocity(sf::Vector2f{0.f,0.f})
 {
 	_animation.setFramePointer(soldierColor, _animationState, _direction);
 	_sprite.setScale(sf::Vector2f(SOLDIER_SCALE, SOLDIER_SCALE));

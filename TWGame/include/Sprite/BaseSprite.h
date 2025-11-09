@@ -7,4 +7,5 @@ class BaseSprite
 public:
 	sf::Sprite _sprite;
 	BaseSprite(const sf::Texture& texture);
+	virtual ~BaseSprite(); //abstract base class
 };

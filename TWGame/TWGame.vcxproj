@@ -24,6 +24,7 @@
     <ClCompile Include="src\MouseEventProcessor.cpp" />
     <ClCompile Include="src\SoldierSprite.cpp" />
     <ClCompile Include="src\BaseSprite.cpp" />
+    <ClCompile Include="src\Tile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Animation\Animation.h" />
@@ -41,6 +42,7 @@
     <ClInclude Include="include\Sprite\BaseSprite.h" />
     <ClInclude Include="include\Sprite\SoldierSprite.h" />
     <ClInclude Include="include\Sprite\SoldierConstants.h" />
+    <ClInclude Include="include\Tile.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation\AnimationManager.tpp" />
