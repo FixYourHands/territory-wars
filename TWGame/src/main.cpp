@@ -66,7 +66,7 @@ int main()
 	soldierSprite4.setSoldierState(SpriteConstants::SoldierState::Sitting);
 	soldierSprite5.setSoldierState(SpriteConstants::SoldierState::Idle);
 
-	soldierSprite1.setMovementDirection(AnimationFrameConstants::AnimationAttributes::SoldierDirection::South);
+	soldierSprite1.setSoldierDirection(AnimationFrameConstants::AnimationAttributes::SoldierDirection::East);
 	
 
 	using namespace AnimationFrameConstants::AnimationAttributes;

@@ -25,6 +25,7 @@
     <ClCompile Include="src\SoldierSprite.cpp" />
     <ClCompile Include="src\BaseSprite.cpp" />
     <ClCompile Include="src\Tile.cpp" />
+    <ClCompile Include="src\TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Animation\Animation.h" />
@@ -43,6 +44,7 @@
     <ClInclude Include="include\Sprite\SoldierSprite.h" />
     <ClInclude Include="include\Sprite\SoldierConstants.h" />
     <ClInclude Include="include\Tile.h" />
+    <ClInclude Include="include\TileMap.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="include\Animation\AnimationManager.tpp" />

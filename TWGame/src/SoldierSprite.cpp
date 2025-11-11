@@ -3,26 +3,73 @@
 using namespace AnimationFrameConstants::AnimationAttributes;
 using namespace SpriteConstants::SoldierAttributes;
 
-constexpr sf::Vector2f getIsometricVelocity(const SoldierDirection direction)
+namespace
 {
-	constexpr float s{ SOLDIER_SPEED };
-	switch (direction)
+
+	constexpr SpriteConstants::SoldierState convertAnimationStateToSoldierState(const AnimationState animationState)
 	{
-	case SoldierDirection::North:
-		return sf::Vector2f{ -s, -s };
-	case SoldierDirection::South:
-		return sf::Vector2f{ s, s };
-	case SoldierDirection::East:
-		return sf::Vector2f{ s, -s };
-	case SoldierDirection::West:
-		return sf::Vector2f{ -s, s };
+		switch (animationState)
+		{
+		case AnimationState::Idle:
+			return SpriteConstants::SoldierState::Idle;
+		case AnimationState::Walking:
+			return SpriteConstants::SoldierState::Walking;
+		case AnimationState::Sitting:
+			return SpriteConstants::SoldierState::Sitting;
+		case AnimationState::Punching:
+			return SpriteConstants::SoldierState::Punching;
+		case AnimationState::GettingHit:
+			return SpriteConstants::SoldierState::GettingHit;
+		case AnimationState::Dying:
+			return SpriteConstants::SoldierState::Dying;
+		}
+		return SpriteConstants::SoldierState::Idle;
 	}
 
-	return sf::Vector2f{ 0.f, 0.f };
+	constexpr AnimationState convertSoldierStateToAnimationState(const SpriteConstants::SoldierState soldierState)
+	{
+		switch (soldierState)
+		{
+		case SpriteConstants::SoldierState::Idle:
+			return AnimationState::Idle;
+		case SpriteConstants::SoldierState::Walking:
+			return AnimationState::Walking;
+		case SpriteConstants::SoldierState::Sitting:
+			return AnimationState::Sitting;
+		case SpriteConstants::SoldierState::Punching:
+			return AnimationState::Punching;
+		case SpriteConstants::SoldierState::GettingHit:
+			return AnimationState::GettingHit;
+		case SpriteConstants::SoldierState::Dying:
+			return AnimationState::Dying;
+		}
+		return AnimationState::Idle;
+	}
+
+	constexpr sf::Vector2f getIsometricVelocity(const SoldierDirection direction)
+	{
+		constexpr float x{ SOLDIER_SPEED };
+		constexpr float y{ SOLDIER_SPEED / 2.f };
+		switch (direction)
+		{
+		case SoldierDirection::North:
+			return sf::Vector2f{ -x, -y };
+		case SoldierDirection::South:
+			return sf::Vector2f{ x, y };
+		case SoldierDirection::East:
+			return sf::Vector2f{ x, -y };
+		case SoldierDirection::West:
+			return sf::Vector2f{ -x, y };
+		}
+
+		return SpriteConstants::SoldierAttributes::ZERO_SPEED;
+	}
 }
 
+//------------------------------Public Methods
+
 SoldierSprite::SoldierSprite(const sf::Texture& texture, const SoldierColor soldierColor, const sf::Vector2i&& position)
-	: BaseSprite(texture), _color(soldierColor), _animationState(AnimationState::Sitting),_soldierState(SpriteConstants::SoldierState::Sitting), _direction(SoldierDirection::South), _health(100), _velocity(sf::Vector2f{0.f,0.f})
+	: BaseSprite(texture), _color(soldierColor), _animationState(AnimationState::Sitting),_soldierState(SpriteConstants::SoldierState::Sitting), _direction(SoldierDirection::South), _health(100), _velocity(SpriteConstants::SoldierAttributes::ZERO_SPEED)
 {
 	_animation.setFramePointer(soldierColor, _animationState, _direction);
 	_sprite.setScale(sf::Vector2f(SOLDIER_SCALE, SOLDIER_SCALE));
@@ -39,6 +86,29 @@ void SoldierSprite::update(float deltaTime) {
 	applyMovement(deltaTime);
 }
 
+void SoldierSprite::setSoldierState(const SpriteConstants::SoldierState newState) {
+	_soldierState = newState;
+	setAnimationState(convertSoldierStateToAnimationState(newState));
+	if (_soldierState == SpriteConstants::SoldierState::Walking) {
+		_velocity = getIsometricVelocity(_direction);
+	}
+	else
+	{
+		stopMovement();
+	}
+}
+
+void SoldierSprite::setSoldierDirection(const SoldierDirection direction) {
+	_direction = direction;
+	
+	if (_soldierState == SpriteConstants::SoldierState::Walking)
+		_velocity = getIsometricVelocity(_direction);
+	
+	setAnimationDirection(direction);
+}
+
+//------------------------------Private Methods
+
 void SoldierSprite::setAnimationState(const AnimationState newState) {
 	if (newState != _animationState) {
 		_animationState = newState;
@@ -46,12 +116,7 @@ void SoldierSprite::setAnimationState(const AnimationState newState) {
 	}
 }
 
-void SoldierSprite::setSoldierState(const SpriteConstants::SoldierState newState) {
-	_soldierState = newState;
-	if (_soldierState != SpriteConstants::SoldierState::Walking) {
-		stopMovement();
-	}
-}
+
 
 void SoldierSprite::setAnimationDirection(const SoldierDirection newDirection) {
 	if (newDirection != _direction) {
@@ -60,18 +125,12 @@ void SoldierSprite::setAnimationDirection(const SoldierDirection newDirection) {
 	}
 }
 
-void SoldierSprite::setMovementDirection(const SoldierDirection direction) {
-	_velocity = getIsometricVelocity(direction);
-	setAnimationDirection(direction);
-	setAnimationState(AnimationState::Walking);
-	setSoldierState(SpriteConstants::SoldierState::Walking);
-}
-
 void SoldierSprite::stopMovement() {
-	_velocity = sf::Vector2f{ 0.f, 0.f };
+	_velocity = SpriteConstants::SoldierAttributes::ZERO_SPEED;
 }
 
 void SoldierSprite::applyMovement(float deltaTime) {
 	sf::Vector2f movement{ _velocity * deltaTime };
 	_sprite.move(movement);
 }
+

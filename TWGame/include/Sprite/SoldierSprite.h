@@ -13,11 +13,10 @@ public:
 	SoldierSprite(const sf::Texture& texture,const AnimationFrameConstants::AnimationAttributes::SoldierColor soldierColor, const sf::Vector2i&& position);
 	void draw(sf::RenderWindow& window);
 	void update(float deltaTime);
-	
 	void setSoldierState(const SpriteConstants::SoldierState newState);
-	void setMovementDirection(const AnimationFrameConstants::AnimationAttributes::SoldierDirection newDirection);
-	void stopMovement();
-	void applyMovement(float deltaTime);
+	void setSoldierDirection(const AnimationFrameConstants::AnimationAttributes::SoldierDirection newDirection);
+	
+	
 private:
 	AnimationFrameConstants::AnimationAttributes::AnimationState _animationState;
 	AnimationFrameConstants::AnimationAttributes::SoldierColor _color;
@@ -30,5 +29,7 @@ private:
 private:
 	void setAnimationState(const AnimationFrameConstants::AnimationAttributes::AnimationState newState);
 	void setAnimationDirection(const AnimationFrameConstants::AnimationAttributes::SoldierDirection newDirection);
+	void stopMovement();
+	void applyMovement(float deltaTime);
 
 };
