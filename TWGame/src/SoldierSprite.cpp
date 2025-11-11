@@ -99,12 +99,9 @@ void SoldierSprite::setSoldierState(const SpriteConstants::SoldierState newState
 }
 
 void SoldierSprite::setSoldierDirection(const SoldierDirection direction) {
-	_direction = direction;
-	
-	if (_soldierState == SpriteConstants::SoldierState::Walking)
-		_velocity = getIsometricVelocity(_direction);
-	
 	setAnimationDirection(direction);
+	if (_soldierState == SpriteConstants::SoldierState::Walking)
+		_velocity = getIsometricVelocity(direction);
 }
 
 //------------------------------Private Methods
