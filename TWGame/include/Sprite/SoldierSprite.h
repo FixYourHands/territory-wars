@@ -16,7 +16,6 @@ public:
 	void setSoldierState(const SpriteConstants::SoldierState newState);
 	void setSoldierDirection(const AnimationFrameConstants::AnimationAttributes::SoldierDirection newDirection);
 	
-	
 private:
 	AnimationFrameConstants::AnimationAttributes::AnimationState _animationState;
 	AnimationFrameConstants::AnimationAttributes::SoldierColor _color;

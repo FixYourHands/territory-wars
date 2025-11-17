@@ -1,0 +1,4 @@
+Tile width = 72
+Tile height = 37
+Tile padding = 8
+Tile distancing = 80
