@@ -1,8 +1,8 @@
 #pragma once
 #include <array>
 #include <vector>
-#include "Animation/AnimationFrameConstants.h"
-#include "Animation/AnimationFrameBuilder.h"
+#include "Animation/SpriteAnimation/AnimationFrameConstants.h"
+#include "Animation/SpriteAnimation/AnimationFrameBuilder.h"
 
 
 

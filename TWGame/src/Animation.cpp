@@ -1,4 +1,4 @@
-#include "Animation/Animation.h"
+#include "Animation/SpriteAnimation/Animation.h"
 
 Animation::Animation()
 	: frames(nullptr), elapsedTime(0.f), totalFrames(0), currentFrame(0) {

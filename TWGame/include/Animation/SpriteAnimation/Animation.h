@@ -1,7 +1,7 @@
 #pragma once
-#include "Animation/AnimationFrameBuilder.h"
-#include "Animation/AnimationFrameConstants.h"
-#include "Animation/AnimationManager.h"
+#include "Animation/SpriteAnimation/AnimationFrameBuilder.h"
+#include "Animation/SpriteAnimation/AnimationFrameConstants.h"
+#include "Animation/SpriteAnimation/AnimationManager.h"
 
 
 class Animation

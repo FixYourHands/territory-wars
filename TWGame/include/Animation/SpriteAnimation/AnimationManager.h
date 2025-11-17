@@ -1,6 +1,6 @@
 #pragma once
-#include "AnimationFrameConstants.h"
-#include "Animation/AnimationFrameBuilder.h"
+#include "Animation/SpriteAnimation/AnimationFrameConstants.h"
+#include "Animation/SpriteAnimation/AnimationFrameBuilder.h"
 #include "Animation/SpriteSheet/WalkingAnimationFrames.h"
 #include "Animation/SpriteSheet/SittingAnimationFrames.h"
 #include "Animation/SpriteSheet/PunchingAnimationFrames.h"

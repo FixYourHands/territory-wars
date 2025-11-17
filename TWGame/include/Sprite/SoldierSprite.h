@@ -1,8 +1,8 @@
 #pragma once
 #include "Sprite/BaseSprite.h"
 #include <SFML/Graphics.hpp>
-#include "Animation/AnimationFrameConstants.h"
-#include "Animation/Animation.h"
+#include "Animation/SpriteAnimation/AnimationFrameConstants.h"
+#include "Animation/SpriteAnimation/Animation.h"
 #include "Sprite/SoldierConstants.h"
  
 

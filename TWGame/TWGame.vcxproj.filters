@@ -30,6 +30,12 @@
     <Filter Include="Header Files\Sprite">
       <UniqueIdentifier>{f8c41ca6-5f17-4e24-87b6-32b5025b7d90}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Animation\SpriteAnimation">
+      <UniqueIdentifier>{cf0c5ea4-dba3-4f49-90ef-28b73808efae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Animation\TileAnimation">
+      <UniqueIdentifier>{e8e72ae7-8dbe-450d-92d1-93cd105b1fb1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -61,15 +67,6 @@
     <ClInclude Include="include\MouseEventProcessor.h">
       <Filter>Header Files\Input</Filter>
     </ClInclude>
-    <ClInclude Include="include\Animation\Animation.h">
-      <Filter>Header Files\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Animation\AnimationFrameBuilder.h">
-      <Filter>Header Files\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Animation\AnimationFrameConstants.h">
-      <Filter>Header Files\Animation</Filter>
-    </ClInclude>
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h">
       <Filter>Header Files\Animation\SpriteSheet</Filter>
     </ClInclude>
@@ -88,9 +85,6 @@
     <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h">
       <Filter>Header Files\Animation\SpriteSheet</Filter>
     </ClInclude>
-    <ClInclude Include="include\Animation\AnimationManager.h">
-      <Filter>Header Files\Animation</Filter>
-    </ClInclude>
     <ClInclude Include="include\Sprite\BaseSprite.h">
       <Filter>Header Files\Sprite</Filter>
     </ClInclude>
@@ -106,14 +100,26 @@
     <ClInclude Include="include\TileMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Animation\TileAnimation\TileFrameBuilder.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Animation\TileAnimation\SpawnRateIncreaseTileAnimationFrames.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animation\TileAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\TileAnimation\TileFrameBuilder.h">
+      <Filter>Header Files\Animation\TileAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteAnimation\Animation.h">
+      <Filter>Header Files\Animation\SpriteAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteAnimation\AnimationFrameBuilder.h">
+      <Filter>Header Files\Animation\SpriteAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteAnimation\AnimationFrameConstants.h">
+      <Filter>Header Files\Animation\SpriteAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\SpriteAnimation\AnimationManager.h">
+      <Filter>Header Files\Animation\SpriteAnimation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\Animation\AnimationManager.tpp" />
+    <None Include="include\Animation\SpriteAnimation\AnimationManager.tpp" />
   </ItemGroup>
 </Project>

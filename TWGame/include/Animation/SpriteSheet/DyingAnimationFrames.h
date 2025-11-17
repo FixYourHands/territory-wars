@@ -1,7 +1,7 @@
 #pragma once
 #include <array>
-#include "Animation/AnimationFrameConstants.h"
-#include "Animation/AnimationFrameBuilder.h"
+#include "Animation/SpriteAnimation/AnimationFrameConstants.h"
+#include "Animation/SpriteAnimation/AnimationFrameBuilder.h"
 
 
 namespace FrameSpeeds = AnimationFrameConstants::FrameSpeeds;

@@ -1,8 +1,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include "MouseEventProcessor.h"
-#include "Animation/Animation.h"
-#include "Animation/AnimationManager.h"
+#include "Animation/SpriteAnimation/Animation.h"
+#include "Animation/SpriteAnimation/AnimationManager.h"
 #include "Sprite/SoldierSprite.h"
 #include <vector>
 #include <cmath>

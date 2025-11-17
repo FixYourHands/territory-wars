@@ -11,12 +11,12 @@ struct Coordinates
 
 enum class TileList
 {
-	Black = 1, Green, Neutral, Purple, Yellow
+	Black, Green, Neutral, Purple, Yellow
 };
 
 enum class VertexPoint
 {
-	Top = 1, Left, Right, Bottom
+	Top, Left, Right, Bottom
 };
 
 namespace
@@ -61,7 +61,7 @@ constexpr TileImage buildRateIncreaseTileImage(const TileList color)
 	
 	const int index{ static_cast<int>(color) };
 	constexpr int TILE_DISTANCE{ 80 };
-	int padding{ (index - 1) * TILE_DISTANCE};
+	int padding{ index * TILE_DISTANCE};
 	 
 	return {
 		 getInitialCoordinates(VertexPoint::Top) + padding,
