@@ -38,7 +38,7 @@
     <ClInclude Include="include\Animation\SpriteSheet\PunchingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h" />
-    <ClInclude Include="include\Animation\TileAnimation\SpawnRateIncreaseTileAnimationFrames.h" />
+    <ClInclude Include="include\Animation\TileAnimation\TileAnimationFrames.h" />
     <ClInclude Include="include\Animation\TileAnimation\TileFrameBuilder.h" />
     <ClInclude Include="include\MouseEventProcessor.h" />
     <ClInclude Include="include\resource.h" />

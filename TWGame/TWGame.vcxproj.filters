@@ -100,7 +100,7 @@
     <ClInclude Include="include\TileMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Animation\TileAnimation\SpawnRateIncreaseTileAnimationFrames.h">
+    <ClInclude Include="include\Animation\TileAnimation\TileAnimationFrames.h">
       <Filter>Header Files\Animation\TileAnimation</Filter>
     </ClInclude>
     <ClInclude Include="include\Animation\TileAnimation\TileFrameBuilder.h">

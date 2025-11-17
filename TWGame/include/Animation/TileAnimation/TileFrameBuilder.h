@@ -26,7 +26,7 @@ namespace
 	constexpr Coordinates initialRightVertice{ 76.f,24.f };
 	constexpr Coordinates initialBottomVertice{ 40.f,42.f };
 
-	constexpr Coordinates getInitialCoordinates(const VertexPoint point)
+	inline constexpr Coordinates getInitialCoordinates(const VertexPoint point)
 	{
 		switch (point)
 		{
@@ -56,7 +56,7 @@ struct TileImage
 
 
 
-constexpr TileImage buildRateIncreaseTileImage(const TileList color)
+inline constexpr TileImage buildTileImage(const TileList color)
 {
 	
 	const int index{ static_cast<int>(color) };
