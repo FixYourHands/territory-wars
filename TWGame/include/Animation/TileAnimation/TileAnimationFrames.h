@@ -1,3 +1,4 @@
+#pragma once
 #include "TileFrameBuilder.h"
 #include <array>
 

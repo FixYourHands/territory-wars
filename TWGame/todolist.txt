@@ -1,0 +1,2 @@
+make spawn tiles
+make TileAnimationManager with pointer return function

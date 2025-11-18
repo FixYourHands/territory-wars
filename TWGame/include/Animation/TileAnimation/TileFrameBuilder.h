@@ -1,3 +1,5 @@
+#pragma once
+
 struct Coordinates
 {
 	float x;
@@ -61,7 +63,7 @@ inline constexpr TileImage buildTileImage(const TileList color)
 	
 	const int index{ static_cast<int>(color) };
 	constexpr int TILE_DISTANCE{ 80 };
-	int padding{ index * TILE_DISTANCE};
+	const int padding{ index * TILE_DISTANCE};
 	 
 	return {
 		 getInitialCoordinates(VertexPoint::Top) + padding,

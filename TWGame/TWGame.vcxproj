@@ -25,6 +25,7 @@
     <ClCompile Include="src\SoldierSprite.cpp" />
     <ClCompile Include="src\BaseSprite.cpp" />
     <ClCompile Include="src\Tile.cpp" />
+    <ClCompile Include="src\TileAnimationManager.cpp" />
     <ClCompile Include="src\TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +40,7 @@
     <ClInclude Include="include\Animation\SpriteSheet\SittingAnimationFrames.h" />
     <ClInclude Include="include\Animation\SpriteSheet\WalkingAnimationFrames.h" />
     <ClInclude Include="include\Animation\TileAnimation\TileAnimationFrames.h" />
+    <ClInclude Include="include\Animation\TileAnimation\TileAnimationManager.h" />
     <ClInclude Include="include\Animation\TileAnimation\TileFrameBuilder.h" />
     <ClInclude Include="include\MouseEventProcessor.h" />
     <ClInclude Include="include\resource.h" />

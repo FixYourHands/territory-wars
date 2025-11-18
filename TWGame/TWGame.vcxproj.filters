@@ -59,6 +59,9 @@
     <ClCompile Include="src\TileMap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\TileAnimationManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\resource.h">
@@ -117,6 +120,9 @@
     </ClInclude>
     <ClInclude Include="include\Animation\SpriteAnimation\AnimationManager.h">
       <Filter>Header Files\Animation\SpriteAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation\TileAnimation\TileAnimationManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
