@@ -1,17 +1,18 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "Sprite/SoldierConstants.h"
+#include "Animation/TileAnimation/TileAnimationManager.h"
+
+
+namespace TileAttributes
+{
+	constexpr int TILE_WIDTH{ 72 };
+	constexpr int TILE_HEIGHT{ 38 };
+}
 
 class Tile
 {
 public:
-	enum class TileType
-	{
-		Empty,
-		Spawn,
-		Spade,
-		Heart
-	};
+	
 	const int row;
 	const int col;
 
@@ -24,6 +25,9 @@ public:
 private:
 	bool _isOccupied;
 	TileType _type;
-	constexpr static int TILE_WIDTH{ SpriteConstants::TileAttributes::TILE_WIDTH };
-	constexpr static int TILE_HEIGHT{ SpriteConstants::TileAttributes::TILE_HEIGHT };
+	constexpr static int TILE_WIDTH{ TileAttributes::TILE_WIDTH };
+	constexpr static int TILE_HEIGHT{ TileAttributes::TILE_HEIGHT };
+
+private:
+	void setTileImage();
 };
