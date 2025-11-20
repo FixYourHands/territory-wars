@@ -1,4 +1,7 @@
-﻿  TileAnimationManager.cpp
+﻿  Animation.cpp
+  SoldierSprite.cpp
+  main.cpp
+  Generating Code...
   TWGame.vcxproj -> F:\Programming\C++\Territory Wars\territory-wars\TWGame\x64\Debug\TWGame.exe
   F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-audio-3.dll
   F:\Programming\C++\Territory Wars\territory-wars\TWGame\bin\sfml-audio-d-3.dll

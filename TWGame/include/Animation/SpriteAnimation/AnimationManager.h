@@ -27,7 +27,7 @@ namespace
 	using namespace PixelCoordinates::FrameLevels;
 }
 
-static const inline std::vector<const WalkAnimation*> allWalkingAnimations
+inline const std::vector<const WalkAnimation*> allWalkingAnimations
 {
 	// Black
 	&ANIMATION_BlackWalkRightFront,
@@ -51,7 +51,7 @@ static const inline std::vector<const WalkAnimation*> allWalkingAnimations
 	&ANIMATION_PurpleWalkRightRear
 };
 
-static const inline std::vector<const IdleAnimation*> allIdleAnimations
+inline const std::vector<const IdleAnimation*> allIdleAnimations
 {
 	// Black
 	&ANIMATION_BlackIdleRightFront,
@@ -75,7 +75,7 @@ static const inline std::vector<const IdleAnimation*> allIdleAnimations
 	&ANIMATION_PurpleIdleRightRear
 };
 
-static const inline std::vector<const SitAnimation*> allSittingAnimations
+inline const std::vector<const SitAnimation*> allSittingAnimations
 {
 	// Black
 	&ANIMATION_BlackSitRightFront,
@@ -99,7 +99,7 @@ static const inline std::vector<const SitAnimation*> allSittingAnimations
 	&ANIMATION_PurpleSitRightRear
 };
 
-static const inline std::vector<const PunchAnimation*> allPunchingAnimations
+inline const std::vector<const PunchAnimation*> allPunchingAnimations
 {
 	// Black
 	&ANIMATION_BlackPunchRightFront,
@@ -123,7 +123,7 @@ static const inline std::vector<const PunchAnimation*> allPunchingAnimations
 	&ANIMATION_PurplePunchRightRear
 };
 
-static const inline std::vector<const GetHitAnimation*> allGettingHitAnimations
+inline const std::vector<const GetHitAnimation*> allGettingHitAnimations
 {
 	// Black
 	&ANIMATION_BlackGetHitRightFront,
@@ -147,7 +147,7 @@ static const inline std::vector<const GetHitAnimation*> allGettingHitAnimations
 	&ANIMATION_PurpleGetHitRightRear
 };
 
-static const inline std::vector<const DyingAnimation*> allDyingAnimations
+inline const std::vector<const DyingAnimation*> allDyingAnimations
 {
 	// Black
 	&ANIMATION_BlackDieRightFront,

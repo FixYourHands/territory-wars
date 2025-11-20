@@ -94,9 +94,6 @@
     <ClInclude Include="include\Sprite\SoldierSprite.h">
       <Filter>Header Files\Sprite</Filter>
     </ClInclude>
-    <ClInclude Include="include\Sprite\SoldierConstants.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Tile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -122,7 +119,10 @@
       <Filter>Header Files\Animation\SpriteAnimation</Filter>
     </ClInclude>
     <ClInclude Include="include\Animation\TileAnimation\TileAnimationManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Animation\TileAnimation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sprite\SoldierConstants.h">
+      <Filter>Header Files\Sprite</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
