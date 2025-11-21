@@ -57,6 +57,8 @@ int main()
 	vArray2.append(sf::Vertex{ {235.f,317.5f},sf::Color::White,{76,24} });
 	vArray2.append(sf::Vertex{ {200.f,335.f},sf::Color::White,{40.f,44.f} });
 
+	SoldierSprite ss1(texture, SoldierColor::Black, sf::Vector2{ 200,200 });
+
 	//scaleShape(vArray, 2, 2, 1);
 	scaleShape(vArray2, 3, 2, 1);
 
@@ -90,9 +92,11 @@ int main()
 			
 		}
 		window.clear(sf::Color::White);
+		ss1.update(deltaTime);
 		
 		//window.draw(vArray,&heartTileTexture);
 		window.draw(vArray2,&heartTileTexture);
+		ss1.draw(window);
 	
 
 		window.display();
