@@ -5,6 +5,7 @@
 namespace
 {
 	namespace FrameSpeeds = AnimationFrameConstants::FrameSpeeds;
+	namespace AnimationLengths = AnimationFrameConstants::AnimationLengths;
 }
 
 namespace Enumerations
@@ -93,6 +94,18 @@ namespace PixelCoordinates
 		constexpr Enumerations::RowNumber purpleRowLevel_3{ 14 };
 		constexpr Enumerations::RowNumber purpleRowLevel_4{ 15 };
 	}
+}
+
+namespace AnimationAliases
+{
+	using WalkingAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
+	using IdlingAnimation = std::array<DataStructures::FrameData, AnimationLengths::idleFrameLength>;
+	using SittingAnimation = std::array<DataStructures::FrameData, AnimationLengths::sittingFrameLength>;
+	using PunchingAnimation = std::array<DataStructures::FrameData, AnimationLengths::punchingFrameLength>;
+	using GettingHitAnimation = std::array<DataStructures::FrameData, AnimationLengths::gettingHitFrameLength>;
+	using DyingAnimation = std::array<DataStructures::FrameData, AnimationLengths::dyingFrameLength>;
+
+	
 }
 
 namespace Builder

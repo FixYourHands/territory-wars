@@ -9,25 +9,11 @@
 #include "Animation/SpriteSheet/GettingHitAnimationFrames.h"
 #include <vector>
 
-using namespace AnimationFrameConstants::AnimationAttributes;
-namespace FrameSpeeds = AnimationFrameConstants::FrameSpeeds;
-namespace AnimationLengths = AnimationFrameConstants::AnimationLengths;
-namespace
-{
-	using BlackWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
-	using YellowWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
-	using GreenWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
-	using PurpleWalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
-	using WalkAnimation = std::array<DataStructures::FrameData, AnimationLengths::walkingFrameLength>;
-	using SitAnimation = std::array<DataStructures::FrameData, AnimationLengths::sittingFrameLength>;
-	using IdleAnimation = std::array<DataStructures::FrameData, AnimationLengths::idleFrameLength>;
-	using PunchAnimation = std::array<DataStructures::FrameData, AnimationLengths::punchingFrameLength>;
-	using DyingAnimation = std::array<DataStructures::FrameData, AnimationLengths::dyingFrameLength>;
-	using GetHitAnimation = std::array<DataStructures::FrameData, AnimationLengths::gettingHitFrameLength>;
-	using namespace PixelCoordinates::FrameLevels;
-}
 
-inline const std::vector<const WalkAnimation*> allWalkingAnimations
+using namespace AnimationAliases;
+using namespace AnimationFrameConstants::AnimationAttributes;
+
+inline const std::vector<const WalkingAnimation*> allWalkingAnimations
 {
 	// Black
 	&ANIMATION_BlackWalkRightFront,
@@ -51,7 +37,7 @@ inline const std::vector<const WalkAnimation*> allWalkingAnimations
 	&ANIMATION_PurpleWalkRightRear
 };
 
-inline const std::vector<const IdleAnimation*> allIdleAnimations
+inline const std::vector<const IdlingAnimation*> allIdleAnimations
 {
 	// Black
 	&ANIMATION_BlackIdleRightFront,
@@ -75,7 +61,7 @@ inline const std::vector<const IdleAnimation*> allIdleAnimations
 	&ANIMATION_PurpleIdleRightRear
 };
 
-inline const std::vector<const SitAnimation*> allSittingAnimations
+inline const std::vector<const SittingAnimation*> allSittingAnimations
 {
 	// Black
 	&ANIMATION_BlackSitRightFront,
@@ -99,7 +85,7 @@ inline const std::vector<const SitAnimation*> allSittingAnimations
 	&ANIMATION_PurpleSitRightRear
 };
 
-inline const std::vector<const PunchAnimation*> allPunchingAnimations
+inline const std::vector<const PunchingAnimation*> allPunchingAnimations
 {
 	// Black
 	&ANIMATION_BlackPunchRightFront,
@@ -123,7 +109,7 @@ inline const std::vector<const PunchAnimation*> allPunchingAnimations
 	&ANIMATION_PurplePunchRightRear
 };
 
-inline const std::vector<const GetHitAnimation*> allGettingHitAnimations
+inline const std::vector<const GettingHitAnimation*> allGettingHitAnimations
 {
 	// Black
 	&ANIMATION_BlackGetHitRightFront,

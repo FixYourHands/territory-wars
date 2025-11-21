@@ -15,7 +15,7 @@ namespace SpriteConstants
 
 	namespace SoldierAttributes
 	{
-		constexpr float SOLDIER_SCALE{2.f};
+		constexpr float SOLDIER_SCALE{1.f};
 		constexpr float SOLDIER_SPEED{ 20.f };
 		constexpr sf::Vector2f ZERO_SPEED{ 0.f,0.f };
 		constexpr sf::Vector2f DEFAULT_SPEED{ SOLDIER_SPEED, SOLDIER_SPEED/2.f};
