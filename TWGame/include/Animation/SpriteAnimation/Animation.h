@@ -8,7 +8,7 @@ class Animation
 {
 public:
 	using Milliseconds = float;
-	const DataStructures::FrameData* frames;
+	
 	
 public:
 	Animation(const AnimationFrameConstants::AnimationAttributes::SoldierColor color);
@@ -22,6 +22,7 @@ private:
 	size_t currentFrame;
 	Milliseconds elapsedTime;
 	size_t totalFrames;
+	const DataStructures::FrameData* animationFramePointer;
 
 private:
 	void setAnimationLength(const size_t frameLength);	

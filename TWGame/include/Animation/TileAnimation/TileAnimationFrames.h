@@ -17,7 +17,5 @@ inline constexpr std::array<TileImage, 5> tileImages{
 };
 
 
-//static constexpr const TileImage* getRateIncreaseTileImage() this should be in a manager class
-
 
  
